@@ -1,0 +1,35 @@
+17:54:43 **** Incremental Build of configuration Debug for project mini_proj4 ****
+make all 
+Building file: ../mini_pro4.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"mini_pro4.d" -MT"mini_pro4.o" -c -o "mini_pro4.o" "../mini_pro4.c"
+../mini_pro4.c:19: warning: return type of 'main' is not 'int'
+Finished building: ../mini_pro4.c
+ 
+Building target: mini_proj4.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mini_proj4.map -mmcu=atmega16 -o "mini_proj4.elf"  ./gpio.o ./icu.o ./lcd.o ./mini_pro4.o ./ultrasonic.o   
+Finished building target: mini_proj4.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mini_proj4.elf  >"mini_proj4.lss"
+Finished building: mini_proj4.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 mini_proj4.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9384 bytes (57.3% Full)
+(.text + .data + .bootloader)
+
+Data:        317 bytes (31.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:54:44 Build Finished. 0 errors, 1 warnings. (took 626ms)
+
